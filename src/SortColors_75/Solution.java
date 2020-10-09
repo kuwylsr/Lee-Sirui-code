@@ -3,6 +3,8 @@ package SortColors_75;
 import java.util.*;
 
 public class Solution {
+
+    // 个人解法: 挨个调换
     public void sortColors(int[] nums) {
         int index = 0;
         for (int j = 0; j < 3; j++) {
