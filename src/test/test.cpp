@@ -12,13 +12,10 @@ struct ListNode{
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+
+
 int main(){
 
+    return 0;
 
-    queue<ListNode*> q;
-    ListNode *n = new ListNode(1);
-    n -> next = q.front();
-    if(q.front() == NULL){
-        cout << 0 << endl;
-    }
 }
