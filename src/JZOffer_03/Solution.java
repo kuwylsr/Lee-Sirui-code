@@ -1,4 +1,4 @@
-package JZoffer_03;
+package JZOffer_03;
 
 import java.util.*;
 
