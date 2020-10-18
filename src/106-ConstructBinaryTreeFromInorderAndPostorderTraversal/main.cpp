@@ -32,7 +32,7 @@ public:
         }
         int rootVal = postorder[post_index];
         TreeNode* curRoot = new TreeNode(rootVal);
-        post_index -= 1; //post_index 不断向左移动，正好也正是从右到左 每颗子树的根
+        post_index -= 1; //post_index 不断向左移动，正好也正是从右到左 每颗子树的根 !!!!!!!! 重点
         // 如果没有发现这一特点，你就需要找到当前 inorder[left,right] 中，在 postorder 下标最大的点, 就是下一颗子树的根（很麻烦）
 
         int rootIndexInInorder = m1[rootVal];
