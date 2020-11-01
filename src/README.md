@@ -1,2 +1,2 @@
 # Lee-Sirui-Code
-刷Leecode
+刷Leetcode
