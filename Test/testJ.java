@@ -45,8 +45,11 @@ public class testJ {
 
 	public static void main(String[] args) {
 		
-		String a = "sss";
-		System.out.println(a.charAt(2));
+		int arr_j = 2232;
+		int mod = 100;
+		int dev = 10;
+		int bucket = ((arr_j % mod) / dev) + mod;
+		System.out.println(bucket);
 
 	}
 

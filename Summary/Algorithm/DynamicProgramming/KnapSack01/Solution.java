@@ -1,4 +1,4 @@
-package KnapSack01;
+package Algorithm.DynamicProgramming.KnapSack01;
 
 public class Solution {
 
