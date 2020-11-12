@@ -45,11 +45,8 @@ public class testJ {
 
 	public static void main(String[] args) {
 		
-		int arr_j = 2232;
-		int mod = 100;
-		int dev = 10;
-		int bucket = ((arr_j % mod) / dev) + mod;
-		System.out.println(bucket);
+		String a = "11";
+		
 
 	}
 
