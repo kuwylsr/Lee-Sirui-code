@@ -16,6 +16,8 @@ struct ListNode{
 
 int main(){
 
+    bool a = 1;
+    
     return 0;
 
 }

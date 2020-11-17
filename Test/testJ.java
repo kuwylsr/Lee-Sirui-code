@@ -45,7 +45,13 @@ public class testJ {
 
 	public static void main(String[] args) {
 		
-		String a = "11";
+		boolean a = true;
+		if(a){
+			System.out.println("a为真");
+		}
+		if(a==true){
+			System.out.println("a真为真");
+		}
 		
 
 	}
