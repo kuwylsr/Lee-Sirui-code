@@ -1,4 +1,7 @@
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class ListNode {
 	int val;
@@ -45,14 +48,14 @@ public class testJ {
 
 	public static void main(String[] args) {
 		
-		boolean a = true;
-		if(a){
-			System.out.println("a为真");
-		}
-		if(a==true){
-			System.out.println("a真为真");
-		}
-		
+		Map<Integer,List<Integer>> map = new HashMap<Integer,List<Integer>>();
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(1);
+		map.put(1,list);
+		System.out.println(map);
+		List<Integer> list1 = map.get(1);
+		list1.add(2);
+		System.out.println(map);
 
 	}
 
