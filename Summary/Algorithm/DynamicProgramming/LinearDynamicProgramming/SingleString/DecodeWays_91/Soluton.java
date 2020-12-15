@@ -1,56 +1,10 @@
-import java.util.ArrayList;
+package Algorithm.DynamicProgramming.LinearDynamicProgramming.SingleString.DecodeWays_91;
+
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-		next = null;
-	}
-
-	// @Override
-	// public int hashCode(){
-	// final int prime = 31;
-	// int result = 1;
-	// result = prime * result + val;
-	// return result;
-	// }
-
-	@Override
-	public boolean equals(Object otherObject) {
-		if (otherObject.getClass() == getClass()) {
-			ListNode other = (ListNode) otherObject;
-			if (this.val == other.val) {
-
-				return true;
-			}
-		}
-		return false;
-	}
-}
-
-public class testJ {
-	int i = 0;
-
-	public void dfs(int j) {
-		i++;
-		if (j == 2) {
-			return;
-		}
-		j++;
-		dfs(j);
-		System.out.println("1:" + i);
-	}
-
-
-	public int numDecodings(String s) {
+public class Soluton {
+    public int numDecodings(String s) {
+        char[] arr = s.toCharArray();
         int len = s.length();
         int[] dp = new int[len];
         Arrays.fill(dp,0);
@@ -82,17 +36,15 @@ public class testJ {
         }
 
         for(int i = 2 ; i< len ;i ++){
-            int num1 = Integer.parseInt(s.charAt(i-1)+"");
-            int num2 = Integer.parseInt(s.charAt(i)+"");
-            int conNum = num1*10+num2;
-            if(num1 == 0){
-                if(num2 == 0){
+            if(arr[i-1] == '0'){
+                if(arr[i] == '0'){
                     return 0;
                 }else{
                     dp[i] = dp[i-1];
                 }
             }else{
-                if(num2 == 0){
+                int conNum = (arr[i-1]-'0')*10+(arr[i]-'0');
+                if(arr[i] == '0'){
                     if(conNum >= 1 && conNum <= 26){
                         dp[i] = dp[i-2];
                     }else {
@@ -108,14 +60,5 @@ public class testJ {
             }
         }
         return dp[len-1];
-	}
-	
-	public static void main(String[] args) {
-		char a = '2';
-		System.out.println(Integer.parseInt(a+""));
-		System.out.println((int)a);
-		Set<String> s = new HashSet<String>();
-		
-	}
-
+    }
 }
