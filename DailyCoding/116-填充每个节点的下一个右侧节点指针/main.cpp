@@ -86,7 +86,7 @@ public:
         return root;
     }
 
-    // 评论区：常熟空间的广度优先搜索
+    // 评论区：常数空间的广度优先搜索
     Node* connect(Node* root)
     {
         if (root == nullptr)
