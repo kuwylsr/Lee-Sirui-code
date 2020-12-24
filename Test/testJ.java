@@ -111,10 +111,9 @@ public class testJ {
 	}
 	
 	public static void main(String[] args) {
-		char a = '2';
-		System.out.println(Integer.parseInt(a+""));
-		System.out.println((int)a);
-		Set<String> s = new HashSet<String>();
+        int[][][] dp = new int[1][1][1];
+        dp[0][0][0] = 1;
+        System.out.println(dp[0][0][0]);
 		
 	}
 
