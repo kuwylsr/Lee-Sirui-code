@@ -2,7 +2,7 @@ package Algorithm.DynamicProgramming.LinearDynamicProgramming.SingleString.BestT
 
 public class Solution {
 
-    // 动态规划 : 
+    // 动态规划 : (不好理解)
     public int maxProfit(int[] prices) {
         int len = prices.length;
         int dp[][] = new int[len][3];
@@ -23,7 +23,7 @@ public class Solution {
         return Math.max(dp[len-1][0],dp[len-1][1]);
     }
 
-    // 动态规划 : 
+    // 动态规划 : (容易理解)
     public int maxProfit2(int[] prices) {
         int len = prices.length;
         int dp[][] = new int[len][3];
