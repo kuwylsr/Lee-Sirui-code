@@ -6,7 +6,7 @@ public class Solution {
         int n = grid[0].length;
         int[] res = new int[n];
         for(int num = 0 ; num < n ; num++){ //遍历所有小球
-            int flag = 0;
+            int flag = 0; //标识小球是否会卡住
             int i = 0;
             int j = num;
             while(i < m && j < n && flag == 0){

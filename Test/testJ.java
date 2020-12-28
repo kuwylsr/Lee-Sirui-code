@@ -40,10 +40,12 @@ class ListNode {
 public class testJ {
 
 	public static void main(String[] args) {
-        int[][][] dp = new int[1][1][1];
-        dp[0][0][0] = 1;
-        System.out.println(dp[0][0][0]);
-        String s = "a";
+		StringBuilder sb = new StringBuilder();
+		int a = 1;
+		double b = 3.33;
+		char c = '2';
+		sb.append(a).append(b).append(c);
+		System.out.println(sb.toString());
 	}
 
 }

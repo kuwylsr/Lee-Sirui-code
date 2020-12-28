@@ -36,4 +36,26 @@
 - s 仅由数字组成
 
 ### 算法知识点
-1. 
+1. 回溯法（深度搜索）
+
+- 首先, 我们必须先明确回溯函数所需要的参数
+
+    ~~~ Java 
+    /**
+     * 
+     * @param s 数字字符串
+     * @param index 当前开始形成某个segment的其实下标
+     * @param tmpResult 存储当前结果的数组(长度为4)
+     * @param segmentNum 当前要形成的segment的序号(第几个segment)
+     */
+    private void backTrace(String s, int index, String[] tmpResult, int segmentNum);
+    ~~~
+
+- 回溯函数的递归终止条件
+    - 当形成了4个segment
+    当形成了4个segment,并且用完了4个字符,则结果符合要求,变换格式并将其写入结果集.
+    - 当用完了数字字符串的所有字符
+    - 当出现前导0, 并且遍历完了该前导0的所有情况.(因为前导0的存在, 它能形成的segment只有一种, 不需要在进行回溯)
+
+- 回溯的编写
+因为此题,回溯的意思就是在此前的segment的基础上再往后添加字符形成新的segment, 因此只需要仅需遍历for循环即可, 然后重新覆盖之前的tmpResult.
