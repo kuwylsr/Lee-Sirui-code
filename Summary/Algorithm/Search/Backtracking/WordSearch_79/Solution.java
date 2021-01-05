@@ -1,4 +1,4 @@
-package Algorithm.DynamicProgramming.LinearDynamicProgramming.DoubleString.WordSearch_79;
+package Algorithm.Search.Backtracking.WordSearch_79;
 
 public class Solution {
     public boolean exist(char[][] board, String word) {
