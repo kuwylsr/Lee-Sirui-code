@@ -49,7 +49,7 @@ public class testJ {
         s.push(1);
         System.out.println(s.peek());
         s.pop();
-        System.out.println(s.size());
+		System.out.println(s.size());
 	}
 
 }
