@@ -41,15 +41,11 @@ class ListNode {
 
 public class testJ {
 
-    
 
 	public static void main(String[] args) {
-        Stack<Integer> s = new Stack<Integer>();
-        s.add(1);
-        s.push(1);
-        System.out.println(s.peek());
-        s.pop();
-		System.out.println(s.size());
+		int n = 15;
+		n = (n & (n-1));
+		System.out.println(Integer.toBinaryString(n));
 	}
 
 }
