@@ -1,4 +1,4 @@
-package ZJOffer_24;
+package JZOffer_24;
 
 
 class ListNode{
