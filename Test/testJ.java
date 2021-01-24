@@ -43,9 +43,9 @@ public class testJ {
 
 
 	public static void main(String[] args) {
-		int n = 15;
-		n = (n & (n-1));
-		System.out.println(Integer.toBinaryString(n));
+
+		String[] slist = new String[1];
+		System.out.print(slist[0] == null);
 	}
 
 }
