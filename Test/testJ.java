@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.Stack;
 
@@ -44,8 +45,9 @@ public class testJ {
 
 	public static void main(String[] args) {
 
-		String[] slist = new String[1];
-		System.out.print(slist[0] == null);
+		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		System.out.println(a);
 	}
 
 }
