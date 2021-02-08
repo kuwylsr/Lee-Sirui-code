@@ -45,6 +45,8 @@ public class testJ {
 
 
 	public static void main(String[] args) {
+		PriorityQueue<Integer> q = new PriorityQueue<>();
+		
 	}
 
 }
