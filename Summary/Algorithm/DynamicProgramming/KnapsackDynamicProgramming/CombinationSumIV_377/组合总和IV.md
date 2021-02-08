@@ -33,3 +33,4 @@ target = 4
 $$
 f(j) = f(j) + f(j-nums[i])
 $$
+初始化 f(0) = 1
