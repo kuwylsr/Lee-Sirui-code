@@ -45,8 +45,21 @@ public class testJ {
 
 
 	public static void main(String[] args) {
-		PriorityQueue<Integer> q = new PriorityQueue<>();
 		
+		// array 转 list
+		String[] arr = new String[]{"11","22"};
+		List<String> list = new ArrayList<String>(Arrays.asList(arr));
+		for(String s : list){
+			System.out.println(s);
+		}
+
+		// list 转 array
+		String[] arr1 = list.toArray(new String[list.size()]);
+
+		for(String s : arr1){
+			System.out.println(s);
+		}
+
 	}
 
 }
