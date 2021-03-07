@@ -51,4 +51,54 @@ public class Solution {
         }
         return result;
     }
+
+    // 第二次独立完成
+    public int[] getMaxMatrix2(int[][] matrix) {
+        int N = matrix.length;
+        int M = matrix[0].length;
+
+        int[][] preSumList = new int[N][M];
+        for(int j = 0 ; j < M ;j ++){ //初始化第一行
+            preSumList[0][j] = matrix[0][j];
+        }
+        for(int i = 1 ; i < N ; i++){
+            for(int j = 0 ; j < M ;j++){
+                preSumList[i][j] = preSumList[i-1][j] + matrix[i][j];
+            }
+        }
+
+        int[] result = new int[]{0,0,0,0};
+        int max = Integer.MIN_VALUE;
+        for(int len = 1 ; len <= N ;len ++){
+            for(int i = 0; i <= N - len ;i++){
+                int j = len + i - 1;
+
+                int[] nums = new int[M];
+                for(int k = 0 ; k < M ;k++){
+                    nums[k] = i == 0 ? preSumList[j][k] : preSumList[j][k] - preSumList[i-1][k];
+                }
+
+                int[] dp = new int[M];
+                dp[0] = nums[0];
+                max = Math.max(max,nums[0]);
+                int start_col = 0;
+                for(int t = 1 ; t < M ;t++){
+                    if(dp[t-1] >= 0){
+                        dp[t] = dp[t-1] + nums[t];
+                    }else{
+                        dp[t] = nums[t];
+                        start_col = t;
+                    }
+                    if(dp[t] > max){
+                        result[0] = i;
+                        result[1] = start_col;
+                        result[2] = j;
+                        result[3] = t;
+                        max = dp[t];
+                    }
+                }
+            }
+        }
+        return result;
+    }
 }

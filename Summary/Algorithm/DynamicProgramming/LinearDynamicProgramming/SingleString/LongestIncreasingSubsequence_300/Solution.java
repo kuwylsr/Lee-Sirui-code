@@ -1,5 +1,7 @@
 package Algorithm.DynamicProgramming.LinearDynamicProgramming.SingleString.LongestIncreasingSubsequence_300;
 
+import java.util.Arrays;
+
 public class Solution {
 
     // 动态规划
@@ -34,8 +36,28 @@ public class Solution {
         return max;
     }
 
-    // 贪心 + 二分查找
+    // 比上面的简洁一些
     public int lengthOfLIS2(int[] nums) {
+
+        int len = nums.length;
+
+        int[] dp = new int[len];
+        Arrays.fill(dp,1);
+
+        int maxlen = 1;
+        for(int i = 1 ; i < len ;i++){
+            for(int j = 0 ; j < i ;j++){
+                if(nums[j] < nums[i]){
+                    dp[i] = Math.max(dp[i],dp[j]+1);
+                }
+            }
+            maxlen = Math.max(maxlen,dp[i]);
+        }
+        return maxlen;
+    }
+
+    // 贪心 + 二分查找
+    public int lengthOfLIS3(int[] nums) {
         return 0;
     }
 
