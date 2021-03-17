@@ -48,17 +48,11 @@ public class testJ {
 
 	public static void main(String[] args) {
 		
-		Map<Integer,String> map = new HashMap<>();
-		map.put(1,"@");
-		map.put(2,"33");
-		
-		Set<Entry<Integer,String>> set = map.entrySet();
-		Iterator<Entry<Integer,String>> it = set.iterator();
-		
-		while(it.hasNext()){
-			Entry<Integer,String> entry = it.next();
-			System.out.println(entry.getKey());
-			System.out.println(entry.getValue());
+		LinkedList<Integer> deque = new LinkedList<Integer>();
+		deque.offerFirst(2);
+		deque.offerFirst(3);
+		for(Integer i : deque){
+			System.out.println(i);
 		}
 	}
 
